@@ -7,8 +7,9 @@
 |mail|string|null: false|
 
 ### Association
-- has many: groups, through: :groups_users
-- has many: messages
+- has_many :groups, through: :groups_users
+- has_many :messages
+- has_many :groups_users
 
 ## groups テーブル
 
@@ -17,8 +18,9 @@
 |name|string|index: true, null: false, unique: true|
 
 ### Association
-- has many :users, through :groups_users
-- has many :messages
+- has_many :users, through: :groups_users
+- has_many :messages
+_ has_many :groups_users
 
 ## groups_usersテーブル
 
@@ -35,7 +37,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|boby|text|null: false|
+|boby|text||
 |image|string||
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
