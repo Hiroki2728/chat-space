@@ -1,0 +1,13 @@
+.SideBar
+  .SideBar__userName
+    .SideBar__userName__sideBox
+      .SideBar__userName__sideBox__name hogehoge
+      .SideBar__userName__sideBox__iconBox
+        = link_to "#", class: "SideBar__userName__sideBox__iconBox__pencil" do
+          = icon('far', 'edit')
+        = link_to "#", class: "SideBar__userName__sideBox__iconBox__gear" do
+          = icon('fas', 'cog')
+  .SideBar__groupList
+    = render "groupBox"
+    = render "groupBox"
+    = render "groupBox"

@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.SideBar{
+  width: 300px;
+  background-color: #253141;
+  &__userName{
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    &__sideBox{
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        color: #ffffff;
+      }
+      &__iconBox{
+        width: 60px;
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        &__pencil{
+          color: #ffffff;
+          text-decoration: none;
+        }
+        &__gear{
+          margin-left: 5px;
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__groupList{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    &__groupBox{
+      padding: 20px 20px 40px 20px;
+      &__groupName{
+        color: #ffffff;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__latestMessage{
+        color: #ffffff;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.MainChat{
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  &__groupInfo{
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    &__infoLeftbox{
+      &__currentGroupName{
+        color: #333333;
+        font-size: 20px;
+        margin-top: 40px;
+      }
+      &__memberList{
+        color: #999999;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+    }
+    &__editLink{
+      color: #38aef3;
+      width: 72px;
+      font-size: 16px;
+      padding: 0 20px;
+      margin-top: 28px;
+      text-decoration: none;
+    }
+  }
+
+  &__messageList{
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 0 40px;
+    &__oneBox{
+      &__userBox{
+        display: flex;
+        margin-bottom: 12px;
+        &__messageOwner{
+          color: #333333;
+          font-size: 16px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          padding: 0 0 0 10px;
+        }
+      }
+      &__message{
+        color: #434A54;
+        font-size: 14px;
+        margin-bottom: 46px;
+      }
+    }
+  }
+
+  &__messageForm{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 50px 20px 40px;
+    box-sizing: border-box;
+    &__form{
+      display: flex;
+      justify-content: space-between;
+      &__contents{
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 45px 0 15px;
+          border: none;
+        }
+        &__icon{
+          position: absolute;
+          line-height: 50px;
+          right: 10px;
+          font-size: 25px;
+          &__hidden{
+            display: none;
+          }
+        }
+      }
+      &__submit{
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+}

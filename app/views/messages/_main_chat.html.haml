@@ -1,0 +1,21 @@
+.MainChat
+  .MainChat__groupInfo
+    .MainChat__groupInfo__infoLeftbox
+      .MainChat__groupInfo__infoLeftbox__currentGroupName test
+      .MainChat__groupInfo__infoLeftbox__memberList Member : masa
+    = link_to "#", class: "MainChat__groupInfo__editLink" do
+      Edit
+
+  .MainChat__messageList
+    = render "oneBox"
+    = render "oneBox"
+    = render "oneBox"
+  
+  .MainChat__messageForm
+    %from.MainChat__messageForm__form
+      .MainChat__messageForm__form__contents
+        %input{class: "MainChat__messageForm__form__contents__text", placeholder: "type a message", type: "text"}
+        %label{class: "MainChat__messageForm__form__contents__icon"}
+          = icon('far', 'image')
+          %input{class: "MainChat__messageForm__form__contents__icon__hidden", type: "file"}
+      %input.MainChat__messageForm__form__submit{type: "submit", value: "Send"}
