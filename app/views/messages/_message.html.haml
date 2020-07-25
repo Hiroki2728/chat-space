@@ -1,0 +1,11 @@
+.MainChat__messageList__oneBox
+  .MainChat__messageList__oneBox__userBox
+    .MainChat__messageList__oneBox__userBox__messageOwner
+      = message.user.name
+    .MainChat__messageList__oneBox__userBox__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .MainChat__messageList__oneBox__message
+    - if message.content.present?
+      %p.MainChat__messageList__oneBox__message__content
+        = message.content
+    = image_tag message.image.url, class: 'MainChat__messageList__oneBox__message__image' if message.image.present?
