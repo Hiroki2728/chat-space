@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MainChat__messageList__oneBox">
+        `<div class="MainChat__messageList__oneBox" data-message-id=${message.id}>
           <div class="MainChat__messageList__oneBox__userBox">
             <div class="MainChat__messageList__oneBox__userBox__messageOwner">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="MainChat__messageList__oneBox">
+      `<div class="MainChat__messageList__oneBox" data-message-id=${message.id}>
         <div class="MainChat__messageList__oneBox__userBox">
           <div class="MainChat__messageList__oneBox__userBox__messageOwner">
             ${message.user_name}
@@ -63,4 +63,5 @@ $(function(){
       alert("メッセージ送信に失敗しました")
     })
   })
-})
+  
+});
